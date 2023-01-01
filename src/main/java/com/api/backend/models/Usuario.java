@@ -22,7 +22,7 @@ public class Usuario {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idExp")
     private List<Experiencia> experienciaList;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idSkills")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idSkill")
     private List<Skills> skillsList;
 
     public Usuario() {
@@ -34,6 +34,54 @@ public class Usuario {
         this.apellido = apellido;
         this.titulo = titulo;
         this.descripcion = descripcion;
+        this.fotoPerfil = fotoPerfil;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getFotoPerfil() {
+        return fotoPerfil;
+    }
+
+    public void setFotoPerfil(String fotoPerfil) {
         this.fotoPerfil = fotoPerfil;
     }
 }
